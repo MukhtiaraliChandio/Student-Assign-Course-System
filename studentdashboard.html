@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  
+/* ===== Global ===== */
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url("images/Student.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #fff;
+}
+
+/* ===== Navbar (Mobile) ===== */
+.navbar-inverse {
+    background-color: rgba(25, 135, 84, 0.8); /* semi-transparent green */
+    border-color: rgba(21, 115, 71, 0.8);
+    backdrop-filter: blur(10px); /* blur effect */
+}
+
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff !important;
+}
+
+/* ===== Sidebar ===== */
+.sidenav {
+    background: rgba(255, 255, 255, 0.15); /* translucent */
+    backdrop-filter: blur(15px);           /* glass effect */
+    -webkit-backdrop-filter: blur(15px);
+    border-right: 1px solid rgba(255,255,255,0.3);
+    height: 100vh;
+    padding: 20px;
+    border-radius: 15px;                   /* soft corners */
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Sidebar Heading */
+.sidenav h2 {
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Sidebar Menu */
+.sidenav ul li a {
+    color: #ffffff;
+    font-weight: 500;
+    padding: 12px 20px;
+    border-radius: 10px;
+    margin-bottom: 8px;
+    display: block;
+    transition: 0.3s;
+    backdrop-filter: blur(5px);
+}
+
+/* Active & Hover */
+.sidenav ul li.active a,
+.sidenav ul li a:hover {
+    background-color: rgba(25, 135, 84, 0.7);
+    color: #fff;
+}
+
+/* ===== Cards (Dashboard) ===== */
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    transition: 0.3s;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+    color: #fff;
+}
+
+.card i {
+    font-size: 40px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.card:hover {
+    background: rgba(25, 135, 84, 0.6);
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+/* ===== Content Area ===== */
+.row.content {
+    min-height: 100vh;  /* full screen */
+    padding: 30px;
+}
+
+/* ===== Responsive ===== */
+@media screen and (max-width: 767px) {
+    .row.content {height: auto;} 
+    .sidenav {height: auto; margin-bottom: 20px; border-radius: 15px;}
+}
+</style>
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-inverse visible-xs">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Logo</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li><a href="#">Age</a></li>
+        <li><a href="#">Gender</a></li>
+        <li><a href="#">Geo</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-sm-3 sidenav hidden-xs">
+      <h2>Logo</h2>
+      <ul class="nav nav-pills nav-stacked">
+        <li class="active"><a href="#section1"> WelCome Student Dashboard</a></li>
+        <li><a href="addstudentform.html"> Add New Student</a></li>
+        <li><a href="StudentServlet?option=showData">View Students Record </a></li>
+           <li><a href="CourseServlet?option=viewCourses">View Courses </a></li>
+         <li><a href="studentlogout.jsp">Logout</a></li>
+      
+      </ul><br>
+    </div>
+    <br>
+    
+ 
+
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Dashboard</title>
+
+<!-- Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    min-height: 100vh;
+    background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("images/Sau.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* ===== Glass Sidebar ===== */
+.sidebar {
+    width: 260px;
+    height: 100vh;
+    position: fixed;
+    padding: 20px;
+    overflow-y: auto;
+    background: rgba(255,255,255,0.20);   /* more white glass */
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: 2px 0 25px rgba(0,0,0,0.4);
+    border-right: 1px solid rgba(255,255,255,0.35);
+}
+
+/* Scrollbar */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.7); /* white scrollbar */
+    border-radius: 10px;
+}
+
+/* Logo */
+.sidebar h3 {
+    font-weight: bold;
+    color: #ffffff;            /* WHITE */
+    margin-bottom: 25px;
+    text-align: center;
+    letter-spacing: 1px;
+}
+
+/* Welcome box */
+.sidebar .welcome {
+    background: linear-gradient(135deg, #28a745, #5aff8a);
+    color: #ffffff;
+    padding: 12px;
+    border-radius: 12px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: 600;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+/* Green + White Buttons */
+.sidebar a {
+    display: block;
+    padding: 11px 15px;
+    margin-bottom: 10px;
+    text-decoration: none;
+    color: #ffffff;                 /* WHITE TEXT */
+    background: rgba(40,167,69,0.80);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    border: 1px solid rgba(255,255,255,0.35); /* white border */
+}
+
+.sidebar a:hover {
+    background: #28a745;
+    transform: translateX(6px);
+    box-shadow: 0 0 12px rgba(255,255,255,0.6); /* white glow */
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 280px;
+    padding: 40px;
+}
+
+/* ===== Glass Card ===== */
+.dashboard-card {
+    background: rgba(255,255,255,0.22);   /* white glass */
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    color: #ffffff;
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 20px 35px rgba(0,0,0,0.4);
+    border: 1px solid rgba(255,255,255,0.35);
+}
+
+/* Heading */
+.dashboard-card h2 {
+    color: #ffffff;           /* WHITE heading */
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+/* Paragraph */
+.dashboard-card p {
+    color: #f1f1f1;           /* soft white */
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <h3>Admin Dashboard</h3>
+
+    <div class="welcome">
+        Welcome Admin
+    </div>
+
+    <!-- Instructor -->
+    <a href="addinstructorform.html">➕ Add Instructor</a>
+    <a href="InstructorServlet?option=showInstlistData">👨‍🏫 View Instructors</a>
+
+    <!-- Student -->
+    <a href="addstudentform.html">➕ Add Student</a>
+    <a href="StudentServlet?option=showData">🎓 View Students</a>
+
+    <!-- Course -->
+    <a href="addcourseform.html">➕ Add Course</a>
+    <a href="CourseServlet?option=viewCourses">📘 View Courses</a>
+
+    <!-- Enrollment -->
+    <a href="EnrollmentServlet?option=viewEnrollments">📝 View Enrolment Data</a>
+    <a href="InstructorServlet?option=getInstructorNames">📝 Assign Course</a>
+  
+
+    <hr>
+
+    <a href="contact.html">📞 Contact</a>
+    <a href="adminlogout.jsp">🚪 Logout</a>
+</div>
+
+
+
+</body>
+</html>
